@@ -1,22 +1,27 @@
-import { Sky } from '@react-three/drei'
-// import Ocean from "./Components/Ocean.jsx"
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+
 import './App.css'
+import Ocean from './components/Ocean'
+import { OrbitControls } from '@react-three/drei';
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
+import Skybox from './Components/Skybox';
+import Bench from './Components/Bench';
+import { Vector3 } from 'three' // If you want to scale using Vector3
 
 export default function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <directionalLight color="red" position={ [1, 2, 3] } intensity={ 2.5 }/>
-
-      <Sky sunPosition={[1, 0.1, 1]}/>
-      <mesh>
-        <boxGeometry />
-        <meshStandardMaterial />
-      </mesh>
+      <Skybox/>
+      <Bench position={[15, 0, 15]} // Move the model 2 units along the X-axis
+        rotation={[0, Math.PI / 2, 0]} // Rotate the model 45 degrees around the X-axis
+        scale={[10, 10, 10]} // Scale the model by a factor of 2
+         />
+      <Ocean/>
+      <EffectComposer>
+        <Bloom luminanceThreshold={0.1} luminanceSmoothing={0.9} intensity={1.5} />
+      </EffectComposer>
+      <OrbitControls enableZoom = {true}/>
     </>
   )
 }
