@@ -19,9 +19,9 @@ export default function Ocean() {
         textureHeight: 512,
         waterNormals,
         sunDirection: new THREE.Vector3(),
-        sunColor: 0xffffff,
-        waterColor: 0x001e0f,
-        distortionScale: 3.7,
+        sunColor: 0xeb8934,
+        waterColor: 0x00f6682,
+        distortionScale: 5,
         fog: false,
         format: gl.encoding
       }),

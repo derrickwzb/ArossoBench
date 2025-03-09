@@ -7,13 +7,21 @@ export default function Skybox(){
 
     useEffect(() => {
         const loader = new THREE.CubeTextureLoader();
+        // const texture = loader.load([
+        //   "./Cubemap/right.png",  // +X
+        //   "./Cubemap/left.png",   // -X
+        //   "./Cubemap/top.png",    // +Y
+        //   "./Cubemap/bot.png", // -Y
+        //   "./Cubemap/front.png",  // +Z
+        //   "./Cubemap/back.png"    // -Z
+        // ]);
         const texture = loader.load([
-          "./Cubemap/right.png",  // +X
-          "./Cubemap/left.png",   // -X
-          "./Cubemap/top.png",    // +Y
-          "./Cubemap/bot.png", // -Y
-          "./Cubemap/front.png",  // +Z
-          "./Cubemap/back.png"    // -Z
+          "./Cubemap/clouds/front.jpg",  // +X
+          "./Cubemap/clouds/back.jpg",   // -X
+          "./Cubemap/clouds/up.jpg",    // +Y
+          "./Cubemap/clouds/down.jpg", // -Y
+          "./Cubemap/clouds/right.jpg",  // +Z
+          "./Cubemap/clouds/left.jpg"    // -Z
         ]);
         scene.background = texture;
       }, [scene]);
