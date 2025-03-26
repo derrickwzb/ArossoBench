@@ -1,10 +1,10 @@
 
 import './App.css'
-import Ocean from './components/Ocean'
+import Ocean from './components/Ocean.jsx'
 import {Sphere, MeshWobbleMaterial, OrbitControls ,Sky, Environment} from '@react-three/drei';
 import { EffectComposer, Bloom, ColorAverage } from "@react-three/postprocessing";
-import Skybox from './Components/Skybox';
-import Bench from './Components/Bench';
+import Skybox from './Components/Skybox.jsx';
+import Bench from './Components/Bench.jsx';
 import { Vector3 } from 'three' // If you want to scale using Vector3
 
 export default function App() {
