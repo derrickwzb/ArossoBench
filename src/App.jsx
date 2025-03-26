@@ -1,6 +1,6 @@
 
 import './App.css'
-import Ocean from './components/Ocean.jsx'
+import Ocean from './Components/Ocean.jsx'
 import {Sphere, MeshWobbleMaterial, OrbitControls ,Sky, Environment} from '@react-three/drei';
 import { EffectComposer, Bloom, ColorAverage } from "@react-three/postprocessing";
 import Skybox from './Components/Skybox.jsx';
