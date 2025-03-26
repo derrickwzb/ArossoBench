@@ -14,27 +14,27 @@ export default function App() {
   //todo tint
   return (
     <>
-      
       <Skybox/>
-      <Bench position={[0, 0, 0]} // Move the model 2 units along the X-axis
+
+      <Bench position={[30, 0, 15]} // Move the model 2 units along the X-axis
         rotation={[0, Math.PI / 2, 0]} // Rotate the model 45 degrees around the X-axis
         scale={[10, 10, 10]} // Scale the model by a factor of 2
-         />
+      />
+
       <Ocean/>
+
       <EffectComposer>
-        
-        <Bloom luminanceThreshold={0.3} luminanceSmoothing={0.9} intensity={1.5} />
+        <Bloom luminanceThreshold={0.3} luminanceSmoothing={0.3} intensity={1.5} />
       </EffectComposer>
-      <group>
-      <OrbitControls 
+
+      <OrbitControls  autoRotate autoRotateSpeed={0.5}
+        target={[30, 10, 15]}
         enableZoom = {false}
         enablePan = {false}
         minPolarAngle={Math.PI / 2.5} 
         maxPolarAngle={Math.PI / 2.5} 
         
       />
-      </group>
-      
     </>
   )
 }
