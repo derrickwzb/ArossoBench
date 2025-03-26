@@ -8,13 +8,13 @@ export function Overlay() {
   const isMediumScreen = useMediaQuery("(max-width: 900px)");
   const fontSize = isSmallScreen ? 36 : isMediumScreen ? 48 : 72;
   const lineHeight = isSmallScreen ? "40px" : isMediumScreen ? "50px" : "60px";
-  const bottomSpacing = isSmallScreen ? 150 : isMediumScreen ? 100 : 100;
+  const bottomSpacing = isSmallScreen ? 100 : isMediumScreen ? 100 : 100;
   return (
+    <div>
     <div
       style={{
         position: "absolute",
-        top: 50,
-        left: 0,
+        top: isSmallScreen ? 0 : -50,
         width: "100%",
         height: "100%",
         display: "flex",
@@ -23,10 +23,11 @@ export function Overlay() {
         justifyContent: "flex-start",
         pointerEvents: "none",
         padding: "10px",
+        
       }}
     >
       {/* Top Heading */}
-      <p
+      {/* <p
         style={{
           fontFamily: "'Arial Black', sans-serif",
           fontSize,
@@ -40,8 +41,9 @@ export function Overlay() {
         }}
       >
         AROSSOBENCH
-      </p>
-
+      </p> */}
+      <img src="./Assets/ARB_logo.png"  alignItems= "center" width={isSmallScreen ? "300": "500"} height={isSmallScreen ? "300": "500"}></img>
+      </div>
       {/* Bottom Text */}
       <div
         style={{
@@ -66,6 +68,6 @@ export function Overlay() {
           UNDER CONSTRUCTION
         </p>
       </div>
-    </div>
+      </div>
   );
   }
