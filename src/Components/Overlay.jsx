@@ -26,22 +26,6 @@ export function Overlay() {
         
       }}
     >
-      {/* Top Heading */}
-      {/* <p
-        style={{
-          fontFamily: "'Arial Black', sans-serif",
-          fontSize,
-          fontWeight: 700,
-          lineHeight,
-          color: "black",
-          textAlign: "center",
-          marginBottom: isSmallScreen ? "20px" : "20px",
-          textShadow: "4px 4px 10px rgba(0, 0, 0, 0.4)", // Drop shadow
-          
-        }}
-      >
-        AROSSOBENCH
-      </p> */}
       <img src="./Assets/ARB_logo.png"  alignItems= "center" width={isSmallScreen ? "300": "500"} height={isSmallScreen ? "300": "500"}></img>
       </div>
       {/* Bottom Text */}
@@ -65,7 +49,7 @@ export function Overlay() {
             textShadow: "4px 4px 10px rgba(0, 0, 0, 0.4)", // Drop shadow
           }}
         >
-          UNDER CONSTRUCTION
+          AROSSOBENCH
         </p>
       </div>
       </div>

@@ -1,0 +1,148 @@
+#content-container
+	height: 100vh
+	width: 100vw
+	padding: 12vh 7vw
+	box-sizing: border-box
+	position: relative
+
+	.content-wrapper
+		position: relative
+		height: 100%
+		box-sizing: border-box
+		z-index: 2
+
+	.flex
+		z-index: 2
+		width: 95%
+		height: 100%
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		position: relative
+		box-sizing: border-box
+
+		.flex-wrapper
+			position: relative
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+
+			&.second
+				margin-right: 5vw 
+				justify-content: flex-end
+
+			h1
+				font-weight: 400
+				text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3)
+
+			.title-mask
+				overflow: hidden
+				display: inline-flex
+
+			.mask
+				overflow: hidden
+
+			.h-signature
+				width: 35vh
+				margin-left: -6vh
+
+			.occupation
+				position: relative
+				margin-top: 8vh
+
+			.action-mask
+				margin-top: 10vh
+				margin-right: 7vw
+				display: inline-flex
+				overflow: hidden
+
+				.action
+					font-size: 2vh
+					letter-spacing: 0.5vh
+					// font-family: $font
+					text-transform: uppercase
+					color: white
+					position: relative
+					display: inline-flex
+					flex-direction: row
+					align-items: center
+
+					.mask
+						overflow: hidden
+						height: 2vh
+
+						img
+							height: 2.3vh
+							margin-right: 1.5vh
+							animation: scrollArrowLoop 3s ease infinite
+
+	.parallax-wrapper
+		position: absolute
+		left: 0
+		z-index: -1
+		width: 80%
+		height: 100%
+		margin-left: 5%
+		border-radius: 1.5vh
+		overflow: hidden
+		box-sizing: border-box
+		-webkit-touch-callout: none
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
+		transition: box-shadow 0.6s ease
+		-webkit-transition: box-shadow 0.6s ease
+
+		@media only screen and (max-width: 1250px)
+			&
+				opacity: 0.7
+
+		@media only screen and (max-width: 750px)
+			&
+				opacity: 0.3
+
+		img
+			height: 100%
+			width: 100%
+			object-fit: cover
+			border-radius: 1.5vh
+
+@media only screen and (min-width: 1250px)
+	.h-signature
+		display: block
+
+	.occupation
+		width: 100%
+
+	#content-container .flex *
+		text-align: left
+
+@media only screen and (max-width: 1250px)
+	#content-container .flex *
+		text-align: left
+
+	.flex
+		justify-content: center !important
+		width: 100% !important
+
+		.flex-wrapper 
+			&.first
+				display: none !important
+
+			&.second
+				justify-content: center !important
+				margin: 0
+
+	#content-container .flex .bottom
+		text-align: left
+		left: 5vw
+
+	.parallax-wrapper
+		width: 100% !important
+		margin-left: 0 !important
+
+@media only screen and (max-width: 750px)
+	.occupation
+		width: 70%
