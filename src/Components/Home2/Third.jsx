@@ -1,4 +1,4 @@
-import "./third.css"
+import "./Third.css"
 import React from "react";
 
 const Third = () => {
