@@ -4,14 +4,17 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css'
-import { Home } from './Components/Home/Home';
+import { Homepage } from "./Components/Home2/Homepage";
+// import { Home } from './Components/Home/Home';
+// import { Nav } from "./Components/Nav/Nav";
 
 
 export default function App() {
   return (
   <Router>
+    {/* <Nav/> */}
     <Routes>
-      <Route exact path = "/" element={<Home/>}/>
+      <Route exact path = "/" element={<Homepage/>}/>
     </Routes>
   </Router>
   

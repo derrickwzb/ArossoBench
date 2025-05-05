@@ -1,11 +1,18 @@
 // import { useMediaQuery } from "@mui/material";
 import './Home.css'
 
+import { useState, useRef } from 'react'
+import { Canvas, addEffect } from '@react-three/fiber'
+import { View ,Preload} from '@react-three/drei';
+import { HomeView } from './HomeView';
+import { Work } from './Work';
+
 export function Home() {
   // Media queries for responsiveness
   // const isSmallScreen = useMediaQuery("(max-width: 600px)");
   // const isMediumScreen = useMediaQuery("(max-width: 900px)");
   return (
+    <>
     <div
       id="content-container"
       style={{
@@ -37,11 +44,22 @@ export function Home() {
               </div>
             </div>
           </div>
-            <div className="parallax-wrapper home-back" >
-				image
-            </div>
+          <div className="parallax-wrapper home-back">
+              <View style={{ position: 'absolute', height: "100%",width: "100%"}}>
+                <HomeView  />
+              </View>
+              </div>
         </div>
+        <Canvas
+          style={{ position: 'absolute', height: "100%",width: "100%",top: 0, bottom: 0, left: 0, right: 0, overflow: 'hidden' }}
+          eventSource={document.getElementById('root')}>
+          <View.Port />
+          <Preload all />
+        </Canvas>
       </div>
+      
     </div>
+    <Work/>
+    </>
   );
 }
