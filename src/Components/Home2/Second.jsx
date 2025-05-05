@@ -1,4 +1,4 @@
-import "./second.css";
+import "./Second.css";
 // import GLOBE from "../img/globe.png";
 
 import React from "react";
